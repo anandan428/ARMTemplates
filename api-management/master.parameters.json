@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "publisherEmail": {
+            "value": "nanantharaju@deloitte.com"
+        },
+        "publisherName": {
+            "value": "Nandan A"
+        },
+        "apimServiceName": {
+            "value": "apim-arm"
+        },
+        "sku": {
+            "value": "Developer"
+        },
+        "repoBaseUrl": {
+            "value": "https://github.com/anandan428/ARMTemplates"
+        }
+    }
+}
