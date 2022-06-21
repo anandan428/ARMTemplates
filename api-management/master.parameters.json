@@ -15,7 +15,10 @@
             "value": "Developer"
         },
         "repoBaseUrl": {
-            "value": "https://github.com/anandan428/ARMTemplates"
+            "value": "https://raw.githubusercontent.com/anandan428/resource-management-templates/arm-templates/api-management"
+        },
+        "skuCount": {
+            "value": 1
         }
     }
 }

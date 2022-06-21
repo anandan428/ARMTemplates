@@ -35,6 +35,14 @@
             "metadata": {
                 "description": "The pricing tier of this API Management service"
             }
+        },
+        "skuCount": {
+            "type": "int",
+            "defaultValue": 1,
+            "metadata": {
+                "description":
+                    "The instance  size of this API Management service."
+            }
         }
     },
     "functions": [],
@@ -54,7 +62,8 @@
                     "ApimServiceName": {"value": "[parameters('apimServiceName')]" },
                     "PublisherName": {"value": "[parameters('publisherName')]" },
                     "PublisherEmail": {"value": "[parameters('publisherEmail')]" },
-                    "sku": {"value": "[parameters('sku')]" }
+                    "sku": {"value": "[parameters('sku')]" },
+                    "skuCount": {"value": "[parameters('skuCount')]" }
                 }
             }
         }
