@@ -37,6 +37,12 @@
                 "description":
                     "The instance  size of this API Management service."
             }
+        },
+         "openApiSpecUrl": {
+            "type": "string",
+            "metadata": {
+                "description": "The url for open API specs."
+            }
         }
     },
     "functions": [],
@@ -59,6 +65,28 @@
                     "skuCount": {"value": "[parameters('skuCount')]" }
                 }
             }
+        },
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2021-04-01",
+            "name": "petStoreTemplate",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "relativePath": "./petstore/petstore.template.json"
+                },
+                "parameters": {
+                    "apimServiceName": {
+                        "value": "[parameters('apimServiceName')]"
+                    },
+                    "openApiSpecUrl": {
+                        "value": "[parameters('openApiSpecUrl')]"
+                    }
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Resources/deployments', 'serviceTemplate')]"
+            ]
         }
     ],
     "outputs": {}

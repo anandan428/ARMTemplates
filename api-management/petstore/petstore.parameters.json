@@ -2,20 +2,8 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "publisherEmail": {
-            "value": "nanantharaju@deloitte.com"
-        },
-        "publisherName": {
-            "value": "Nandan A"
-        },
         "apimServiceName": {
             "value": "apim-arm"
-        },
-        "sku": {
-            "value": "Developer"
-        },
-        "skuCount": {
-            "value": 1
         },
         "openApiSpecUrl": {
             "value": "https://petstore3.swagger.io/api/v3/openapi.json"
