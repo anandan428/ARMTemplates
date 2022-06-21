@@ -1,0 +1,22 @@
+version: 0.0.1
+apimServiceName: apim-arm
+policy: ./policies/GlobalPolicy.xml
+apis:
+  - name: Petstore-Creator
+    type: https
+    displayName: Creator's Petstore API
+    description: Petstore API's through creator tool
+    serviceUrl: https://petstore3.swagger.io/api/v3
+    openApiSpec: https://petstore3.swagger.io/api/v3/openapi.json
+    openApiSpecFormat: OpenApi30_Json
+    policy: ./policies/ApiPolicyHeaders.xml
+    suffix: creator-petstore
+    apiVersion: v1
+    isCurrent: true
+    operations:
+      addPet:
+        policy: ./policies/RenameHeader.xml
+      deletePet:
+        policy: ./policies/RenameHeader.xml
+outputLocation: ./GeneratedTemplates
+    
