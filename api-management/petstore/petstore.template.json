@@ -28,6 +28,18 @@
                 "value": "[parameters('openApiSpecUrl')]",
                 "description": "Petstore API's"
             }
+        },
+        {
+            "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+            "apiVersion": "2021-08-01",
+            "name": "[concat(parameters('apimServiceName'), '/petStore/addPet/policy')]",
+            "properties": {
+                "value": "./policy/RenameHeader.xml",
+                "format": "xml-link"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service/apis', parameters('apimServiceName'), 'petStore')]"
+            ]
         }
     ],
     "outputs": {}
