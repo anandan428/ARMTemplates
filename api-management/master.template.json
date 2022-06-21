@@ -2,12 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "repoBaseUrl": {
-            "type": "string",
-            "metadata": {
-                "description": "Base URL of the repository"
-            }
-        },
         "apimServiceName": {
             "type": "string",
             "metadata": {
@@ -55,8 +49,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[concat(parameters('repoBaseUrl'), '/service.template.json')]",
-                    "contentVersion": "1.0.0.0"
+                    "relativePath": "./service.template.json"
                 },
                 "parameters": {
                     "ApimServiceName": {"value": "[parameters('apimServiceName')]" },
